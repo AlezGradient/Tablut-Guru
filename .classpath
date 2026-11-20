@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" output="target/classes" path="src">
+		<attributes>
+			<attribute name="optional" value="true"/>
+			<attribute name="maven.pomderived" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-17">
+		<attributes>
+			<attribute name="module" value="true"/>
+			<attribute name="maven.pomderived" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="con" path="org.eclipse.m2e.MAVEN2_CLASSPATH_CONTAINER">
+		<attributes>
+			<attribute name="maven.pomderived" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="Model_lib/commons-cli-1.4.jar"/>
+	<classpathentry kind="lib" path="Model_lib/commons-codec-1.17.1.jar"/>
+	<classpathentry kind="lib" path="Model_lib/commons-compress-1.27.1.jar"/>
+	<classpathentry kind="lib" path="Model_lib/commons-io-2.16.1.jar"/>
+	<classpathentry kind="lib" path="Model_lib/error_prone_annotations-2.38.0.jar"/>
+	<classpathentry kind="lib" path="Model_lib/gson-2.13.1.jar"/>
+	<classpathentry kind="lib" path="Model_lib/gson-2.2.2.jar"/>
+	<classpathentry kind="lib" path="Model_lib/jna-5.17.0.jar"/>
+	<classpathentry kind="lib" path="Model_lib/pytorch-native-cpu-2.7.1.jar"/>
+	<classpathentry kind="lib" path="Model_lib/slf4j-api-2.0.17.jar"/>
+	<classpathentry kind="lib" path="Model_lib/api-0.31.0.jar"/>
+	<classpathentry kind="lib" path="Model_lib/pytorch-engine-0.31.0.jar"/>
+	<classpathentry kind="lib" path="Model_lib/pytorch-native-cpu-2.4.0-win-x86_64.jar"/>
+	<classpathentry kind="output" path="target/classes"/>
+</classpath>
