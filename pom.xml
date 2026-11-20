@@ -13,21 +13,18 @@
   </properties>
 
   <dependencies>
-    <!-- DJL API -->
     <dependency>
       <groupId>ai.djl</groupId>
       <artifactId>api</artifactId>
       <version>${djl.version}</version>
     </dependency>
 
-    <!-- Motore PyTorch -->
     <dependency>
       <groupId>ai.djl.pytorch</groupId>
       <artifactId>pytorch-engine</artifactId>
       <version>${djl.version}</version>
     </dependency>
 
-    <!-- Libreria nativa CPU vincolata ed esplicita (include le DLL nel JAR) -->
     <dependency>
       <groupId>ai.djl.pytorch</groupId>
       <artifactId>pytorch-native-cpu</artifactId>
@@ -35,14 +32,12 @@
       <classifier>win-x86_64</classifier>
     </dependency>
 
-    <!-- Libreria Tablut locale (pulita, senza doppioni) -->
     <dependency>
       <groupId>it.unibo.ai.didattica</groupId>
       <artifactId>tablut</artifactId>
       <version>1.0</version>
     </dependency>
 
-    <!-- SLF4J NOP Provider per eliminare i warning di log mancanti -->
     <dependency>
       <groupId>org.slf4j</groupId>
       <artifactId>slf4j-nop</artifactId>
@@ -53,7 +48,6 @@
   <build>
     <sourceDirectory>src</sourceDirectory>
     <plugins>
-      <!-- Shade plugin per fat JAR con service providers DJL -->
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-shade-plugin</artifactId>
@@ -66,14 +60,11 @@
             </goals>
             <configuration>
               <transformers>
-                <!-- Configura la classe principale -->
                 <transformer implementation="org.apache.maven.plugins.shade.resource.ManifestResourceTransformer">
                   <mainClass>model.Main</mainClass>
                 </transformer>
-                <!-- Fondamentale per DJL: unisce i file di configurazione dei motori senza sovrascriverli -->
                 <transformer implementation="org.apache.maven.plugins.shade.resource.ServicesResourceTransformer"/>
               </transformers>
-              <!-- Evita problemi di firma dei jar di terze parti -->
               <filters>
                 <filter>
                   <artifact>*:*</artifact>
@@ -89,7 +80,6 @@
         </executions>
       </plugin>
 
-      <!-- Plugin di compilazione Java -->
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-compiler-plugin</artifactId>
