@@ -1,0 +1,1 @@
+.\runmyplayer.sh {White/Black} {timeout} {Server IP}
